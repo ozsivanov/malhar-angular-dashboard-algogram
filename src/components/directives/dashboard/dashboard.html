@@ -28,7 +28,7 @@
 
     <div ui-sortable="sortableOptions" ng-model="widgets" class="dashboard-widget-area">
         <div ng-repeat="widget in widgets" ng-style="widget.containerStyle" class="widget-container" widget>
-            <div class="widget panel panel-default">
+            <div class="widget panel panel-default {{widget.widgetClass}}">
                 <div class="widget-header panel-heading">
                     <h3 class="panel-title">
                         <span class="widget-title" ng-dblclick="editTitle(widget)" ng-hide="widget.editingTitle">{{widget.title}}</span>
