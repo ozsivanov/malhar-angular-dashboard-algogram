@@ -34,6 +34,8 @@ angular.module('ui.dashboard')
           stringifyStorage: true,
           hideWidgetSettings: false,
           hideWidgetClose: false,
+          hideWidgetClear: false,
+          hideWidgetDefault: false,
           settingsModalOptions: {
             templateUrl: 'components/directives/dashboard/widget-settings-template.html',
             controller: 'WidgetSettingsCtrl'

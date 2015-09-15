@@ -163,6 +163,8 @@ It is possible to use your own template for the dashboard and widget markup (rep
 |  sortableOptions | Object | n/a | no | Allows to specify the various [sortable options](http://api.jqueryui.com/sortable/#options) of the underlying jQuery UI Sortable.
 | hideWidgetSettings | Boolean | false | no | If true, the cog button in the top right corner of each widget will not be present. |
 | hideWidgetClose    | Boolean | false | no | If true, the "x" button in the top right corner of each widget will not be present. |
+| hideWidgetDefault    | Boolean | false | no | If true, the "Default Widgets" button in the widget menu will not be present. |
+| hideWidgetClear    | Boolean | false | no | If true, the "Clear" button in the widget menu will not be present. |
 | settingsModalOptions | Object | see below | no | The options object to be passed to the `$modal` service for widget settings. See the **Custom Widget Settings** section below. |
 | onSettingsClose      | Function | see below | no | The success callback for when a widget settings dialog is closed by the user. See the **Custom Widget Settings** section below. |
 | onSettingsDismiss    | Function | see below | no | The error callback for when a widget settings dialog is dismissed by the user. See the **Custom Widget Settings** section below. |

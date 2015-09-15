@@ -19,11 +19,11 @@
             </button>
         </div>
 
-        <button class="btn btn-warning" ng-click="resetWidgetsToDefault()">Default Widgets</button>
+        <button class="btn btn-warning" ng-click="resetWidgetsToDefault()" ng-hide="options.hideWidgetDefault">Default Widgets</button>
 
         <button ng-if="options.storage && options.explicitSave" ng-click="options.saveDashboard()" class="btn btn-success" ng-disabled="!options.unsavedChangeCount">{{ !options.unsavedChangeCount ? "all saved" : "save changes (" + options.unsavedChangeCount + ")" }}</button>
 
-        <button ng-click="clear();" type="button" class="btn btn-info">Clear</button>
+        <button ng-click="clear();" type="button" class="btn btn-info" ng-hide="options.hideWidgetClear">Clear</button>
     </div>
 
     <div ui-sortable="sortableOptions" ng-model="widgets" class="dashboard-widget-area">
