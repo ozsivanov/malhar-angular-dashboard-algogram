@@ -35,7 +35,6 @@ angular.module('ui.dashboard')
           hideWidgetSettings: false,
           hideWidgetClose: false,
           hideWidgetClear: false,
-          hideWidgetDefault: false,
           settingsModalOptions: {
             templateUrl: 'components/directives/dashboard/widget-settings-template.html',
             controller: 'WidgetSettingsCtrl'

@@ -13,7 +13,7 @@
             </span>
     </div>
         <div class="btn-group" ng-if="options.widgetButtons">
-            <button ng-repeat="widget in widgetDefs"
+            <button ng-repeat="widget in widgetDefs" ng-if="!widget.hideWidgetDashboardButton"
                     ng-click="addWidgetInternal($event, widget);" type="button" class="btn btn-primary">
                 {{widget.name}}
             </button>

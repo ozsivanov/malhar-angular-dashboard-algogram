@@ -99,7 +99,7 @@ angular.module('ui.dashboard')
         angular.extend(this.containerStyle, style);
       },
       serialize: function() {
-        return _.pick(this, ['title', 'name', 'style', 'size', 'dataModelOptions', 'attrs', 'storageHash']);
+        return _.pick(this, ['title', 'name', 'style', 'size', 'dataModelOptions', 'attrs', 'storageHash', 'hideWidgetDashboardButton']);
       }
     };
 
