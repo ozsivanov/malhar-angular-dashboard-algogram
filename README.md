@@ -197,6 +197,7 @@ You can think of Widget Definition Objects as a __class__ and the widgets on the
 | onSettingsDismiss    | Function | see below | no | Overrides same-named option in dashboard options for this widget. See the **Custom Widget Settings** section below. |
 | serialize         | Function | see below | no | Define this to override how this widget gets saved to storage. See **persistence** section below. |
 | widgetClass         | String | n/a | no | Define this to add a css class to the widget element. |
+| hideWidgetMenuButton | Boolean | false | no | Option to enable/disable the widget appearing as part of the dashboard button menu. |
 
 As of v1.0.0, you can also add arbitrary data to your WDOs and this data will be copied to your widget. Keep in mind though, that if you want to SAVE some of this arbitrary info with storage, you will need to implement your own serialize method that includes this (see the **persistence** section below).
 
