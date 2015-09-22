@@ -275,7 +275,7 @@ There are four options you can specify in the `dashboardOptions` object relating
 This object will be used by the dashboard to save its state. It should implement the following three methods:
 
 - **storage.getItem(String `key`)**
-  This method will be used to attempt to retrieve previous dashboard state. It can return either a string or a promise. "promise" in this context simply means an object that has a `then` function that takes a `successCallback` and `errorCallback` as its first and second arguments. This follows the most common promise interface (it works with angular's `$q` promise, jQuery's `$.Deferred()` promise, and many others).
+  This method will be used to attempt to retrieve previous dashboard state. It can return either a string or a promise. "promise" in this context simply means an object that has a `then` function that takes a `successCallback` and `errorCallback` as its first and second arguments. This follows the most common promise interface (it works with angular's `$q` promise, jQuery's `$.Deferred()` promise, and many others). 
 - **storage.setItem(String `key`, String `value`)**
   This method is assumed to store `value` in a way that will be accessible later via the `getItem` method above.
 - **storage.removeItem(String `key`)**
