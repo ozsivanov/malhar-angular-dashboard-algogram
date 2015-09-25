@@ -84,7 +84,7 @@ angular.module('ui.dashboard')
       },
 
       _handleSyncLoad: function(serialized) {
-        if (serialized.data.dashboardLayout){
+        if (serialized.data && serialized.data.dashboardLayout){
           serialized = serialized.data.dashboardLayout;
         }
         var deserialized, result = [];

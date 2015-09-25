@@ -127,7 +127,6 @@ angular.module('app', [
     }
   ])
   .controller('DemoCtrl', function ($scope, $interval, $window, widgetDefinitions, defaultWidgets) {
-    console.log($window.localStorage);
     $scope.dashboardOptions = {
       widgetButtons: true,
       widgetDefinitions: widgetDefinitions,

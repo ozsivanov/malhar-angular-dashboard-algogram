@@ -165,6 +165,7 @@ It is possible to use your own template for the dashboard and widget markup (rep
 | hideWidgetClose    | Boolean | false | no | If true, the "x" button in the top right corner of each widget will not be present. |
 | hideWidgetDefault    | Boolean | false | no | If true, the "Default Widgets" button in the widget menu will not be present. |
 | hideWidgetClear    | Boolean | false | no | If true, the "Clear" button in the widget menu will not be present. |
+| allowDuplicates    | Boolean | true | no | If true, the dashboard will be able to contain more than one of each widget. |
 | settingsModalOptions | Object | see below | no | The options object to be passed to the `$modal` service for widget settings. See the **Custom Widget Settings** section below. |
 | onSettingsClose      | Function | see below | no | The success callback for when a widget settings dialog is closed by the user. See the **Custom Widget Settings** section below. |
 | onSettingsDismiss    | Function | see below | no | The error callback for when a widget settings dialog is dismissed by the user. See the **Custom Widget Settings** section below. |

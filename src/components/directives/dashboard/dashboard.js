@@ -35,6 +35,7 @@ angular.module('ui.dashboard')
           hideWidgetSettings: false,
           hideWidgetClose: false,
           hideWidgetClear: false,
+          allowDuplicates: true,
           settingsModalOptions: {
             templateUrl: 'components/directives/dashboard/widget-settings-template.html',
             controller: 'WidgetSettingsCtrl'
@@ -77,7 +78,7 @@ angular.module('ui.dashboard')
 
         // Save default widget config for reset
         scope.defaultWidgets = scope.options.defaultWidgets;
-
+        
         scope.widgetDefs = new WidgetDefCollection(scope.options.widgetDefinitions);
         var count = 1;
 
@@ -95,7 +96,7 @@ angular.module('ui.dashboard')
          * @param {Object} widgetToInstantiate The definition object of the widget to be instantiated
          */
         scope.addWidget = function (widgetToInstantiate, doNotSave) {
-
+          
           if (typeof widgetToInstantiate === 'string') {
             widgetToInstantiate = {
               name: widgetToInstantiate
@@ -116,10 +117,19 @@ angular.module('ui.dashboard')
           // Instantiation
           var widget = new WidgetModel(defaultWidgetDefinition, widgetToInstantiate);
 
+          var exists = false;
+          scope.widgets.forEach(function(w){
+            if (w.name === widget.name){
+              exists = true;
+            }
+          });
+
           // Add to the widgets array
-          scope.widgets.push(widget);
-          if (!doNotSave) {
-            scope.saveDashboard();
+          if (scope.options.allowDuplicates || !exists){
+            scope.widgets.push(widget);
+            if (!doNotSave) {
+              scope.saveDashboard();
+            }
           }
 
           return widget;
